@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/* --exit"
+    "test": "mocha ./test/* --exit",
+    "lint": "eslint **/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,12 @@
     "express": "^4.17.1",
     "mocha": "^8.2.1",
     "supertest": "^6.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1"
   }
 }

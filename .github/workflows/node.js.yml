@@ -13,10 +13,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Super-Linter
-      uses: github/super-linter
+    
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -27,7 +24,7 @@ jobs:
       run: |
         npm install
         npm test
-        
+        eslint . --ext .js
       env:
         CI: true
 
