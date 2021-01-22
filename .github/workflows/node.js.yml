@@ -15,21 +15,10 @@ jobs:
         node-version: [14.x]
     
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Run ESLint
-      uses: stefanoeb/eslint-action@1.0.2
-      run: |
-        npm install
-        eslint . --ext .js
-      env:
-        CI: true
+      - uses: actions/checkout@v1
+      - uses: stefanoeb/eslint-action@1.0.2
 
   deploy:
-    needs: [test]
     runs-on: ubuntu-latest
 
     steps:
