@@ -22,10 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Run ESLint
       uses: stefanoeb/eslint-action@1.0.2
-    - name: npm install and test
       run: |
         npm install
-        npm test
         eslint . --ext .js
       env:
         CI: true
