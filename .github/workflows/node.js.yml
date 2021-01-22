@@ -23,6 +23,7 @@ jobs:
     - name: npm install and test
       run: |
         npm install
+        npx eslint . --ext .js,.jsx,.ts,.tsx
         npm test
       env:
         CI: true
