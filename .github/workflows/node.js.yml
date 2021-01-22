@@ -22,8 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install and test
       run: |
-        npx eslint . --ext .js,.jsx,.ts,.tsx
         npm install
+        npx eslint . --ext .js,.jsx,.ts,.tsx
         npm test
       env:
         CI: true
