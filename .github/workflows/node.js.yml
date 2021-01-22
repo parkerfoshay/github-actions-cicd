@@ -42,5 +42,5 @@ jobs:
         script: |
           cd ~/github-actions-cicd
           git pull origin main
-          npm install --production
+          npm install 
           pm2 restart node-app
