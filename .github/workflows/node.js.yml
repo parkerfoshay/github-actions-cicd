@@ -28,7 +28,7 @@ jobs:
         CI: true
 
   
-    lint:
+  lint:
 
       runs-on: ubuntu-latest
 
