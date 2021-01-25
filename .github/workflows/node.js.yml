@@ -28,7 +28,7 @@ jobs:
         CI: true
 
   jobs:
-    test:
+    lint:
 
       runs-on: ubuntu-latest
 
@@ -45,7 +45,7 @@ jobs:
       - name: npm install and test
         run: |
           npm install
-          npm test
+          npx eslint . --ext .js,.jsx,.ts,.tsx
         env:
           CI: true
 
